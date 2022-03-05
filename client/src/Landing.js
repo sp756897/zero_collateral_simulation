@@ -246,7 +246,7 @@ class Landing extends Component {
                             <div class="col s12 m12">
                                 <div class="card blue-grey darken-1">
                                     <div class="card-content white-text">
-                                        <span class="card-title">Card Title</span>
+                                        <span class="card-title">Username</span>
                                         <div className="container">
                                             <div className="row">
                                                 <div className="">
@@ -293,7 +293,7 @@ class Landing extends Component {
                             <div class="col s12 m10">
                                 <div class="card blue z-depth-3">
                                     <div class="card-content white-text">
-                                        <span class="card-title">Card Title</span>
+                                        <span class="card-title">Loan Borrow</span>
                                         <div className="container">
                                             <div className="row">
                                                 <div className="">
@@ -354,7 +354,7 @@ class Landing extends Component {
                             <div class="col s12 m10">
                                 <div class="card blue-grey z-depth-3">
                                     <div class="card-content white-text">
-                                        <span class="card-title">Card Title</span>
+                                        <span class="card-title">Loan Repay</span>
                                         <div className="container">
                                             <div className="row">
                                                 <div className="">
