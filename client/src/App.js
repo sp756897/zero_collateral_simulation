@@ -10,12 +10,10 @@ import Navbar from "./Navbar"
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Landing />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar />
+      <Landing />
+    </div>
   );
 }
 
