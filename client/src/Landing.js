@@ -360,7 +360,7 @@ class Landing extends Component {
                                                 <div className="">
                                                     <form noValidate onSubmit={this.onRepay}>
                                                         <div className="input-field col s12">
-                                                            <label htmlFor="principal">Due Amount - {this.state.due} </label>
+                                                            <label htmlFor="principal">Due Amount - {this.state.interest + this.state.principal} </label>
                                                         </div>
                                                         <div className="input-field col s12">
                                                             <label htmlFor="rate">Due Time - {this.state.duetime} </label>
@@ -397,7 +397,7 @@ class Landing extends Component {
                     <div class="col s12 m6">
                         <div class="row">
                             <div class="col s12">
-                                <div class="card white z-depth-3">
+                                <div class="card white z-depth-4">
                                     <div class="card-content black-text">
                                         <span class="card-title">Lend</span>
                                         <div class="row">
