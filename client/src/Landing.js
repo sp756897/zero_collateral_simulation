@@ -93,7 +93,7 @@ class Landing extends Component {
                 }, 5000);
                 await axios
                     .post("/api/users/getUser", user)
-                    .then((data) => {
+                    .then(async (data) => {
                         console.log(data.data.principal)
                         this.setState({
                             principal: data.data.principal,
@@ -103,6 +103,13 @@ class Landing extends Component {
                             previous_interest: data.data.previous_interest,
                             lent: data.data.lent_amount,
                         })
+                        await axios
+                            .get("/api/users/getPoolvalue")
+                            .then((data) => {
+                                this.setState({
+                                    pool: data.data.pool
+                                })
+                            })
 
                     })
                     .catch(err => {
@@ -124,12 +131,16 @@ class Landing extends Component {
 
         await axios
             .post("/api/users/repay", user)
-            .then((data) => {
+            .then(async (data) => {
                 console.log(data.data.pool)
                 clearTimeout(this.timer)
-                this.setState({
-                    pool: data.data.pool
-                })
+                await axios
+                    .get("/api/users/getPoolvalue")
+                    .then((data) => {
+                        this.setState({
+                            pool: data.data.pool
+                        })
+                    })
             })
             .catch(err => {
                 console.log(err)
